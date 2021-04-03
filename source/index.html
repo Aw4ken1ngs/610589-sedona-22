@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -18,10 +16,10 @@
   <nav class="main-navigation">
     <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <ul class="main-navigation__list">
-      <li class="main-navigation__item"><a>Главная</a></li>
-      <li class="main-navigation__item"><a href="#">Фото и видео</a></li>
-      <li class="main-navigation__item"><a href="#">Форма отзыва</a></li>
-      <li class="main-navigation__item"><a href="#">Html Academy</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link">Главная</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link" href="#">Фото и видео</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link" href="#">Форма отзыва</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link" href="#">Html Academy</a></li>
     </ul>
   </nav>
   <main class="page-main">
@@ -37,7 +35,7 @@
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества Седоны</h2>
       <ol class="advantages__list">
-        <li class="advantages__item extended">
+        <li class="advantages__item advantages__item--extended">
           <h3 class="advantages__title">Настоящий городок</h3>
           <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           <img src="img/photo-city-mobile.jpg" alt="Изображеие города">
@@ -56,20 +54,20 @@
             </li>
           </ul>
         </li>
-        <li class="advantages__item extended">
+        <li class="advantages__item advantages__item--extended">
           <h3 class="advantage__title">Там есть мост дьявола</h3>
           <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           <img src="img/photo-bridge-mobile.jpg" alt="Изображение моста">
         </li>
-        <li class="advantages__item advantage__item--line brief">
+        <li class="advantages__item advantage__item--line advantages__item--brief">
           <h3 class="advantages__title">Небольшая площадь</h3>
           <p class="advantages__text">Все интересные места находятся очень близко</p>
         </li>
-        <li class="advantages__item advantage__item--line brief">
+        <li class="advantages__item advantage__item--line advantages__item--brief">
           <h3 class="advantages__title">Красивая дорога</h3>
           <p class="advantages__text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
         </li>
-        <li class="advantages__item brief">
+        <li class="advantages__item advantages__item--brief">
           <h3 class="advantages__title">Мало туристов</h3>
           <p class="advantages__text">Большинство едет в гранд каньони толпится там</p>
         </li>
@@ -88,7 +86,7 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__contact">
-      <a href="@">#visitsedona</a>
+      <a class="page-footer__link" href="@">#visitsedona</a>
     </div>
     <div class="page-footer__social social">
       <ul class="social__list">
