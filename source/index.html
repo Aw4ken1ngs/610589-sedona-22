@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -15,17 +16,17 @@
   <nav class="main-navigation">
     <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <ul class="main-navigation__list">
-      <li class="main-navigation__item"><a>Главная</a></li>
-      <li class="main-navigation__item"><a href="#">Фото и видео</a></li>
-      <li class="main-navigation__item"><a href="#">Форма отзыва</a></li>
-      <li class="main-navigation__item"><a href="#">Html Academy</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link">Главная</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Фото и видео</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">Форма отзыва</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link" href="#">Html Academy</a></li>
     </ul>
   </nav>
   <main class="page-main">
     <h1 class="visually-hidden">Главная страница сайта Sedona</h1>
     <section class="intro">
       <h2 class="visually-hidden">Добро пожаловать в великодушную Седону </h2>
-      <!--Изображдения-->
+      <img class="intro__img" src="img/intro-img-mobile.jpg" alt="приветственное изображение ландшафта Седоны">
     </section>
     <section class="advantage">
       <h2 class="advantage__title">Седона — небольшой городок в аризоне, заслуживающий большего!</h2>
@@ -34,10 +35,10 @@
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества Седоны</h2>
       <ol class="advantages__list">
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--extended">
           <h3 class="advantages__title">Настоящий городок</h3>
           <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-          <img src="#" alt="Изображеие города">
+          <img src="img/photo-city-mobile.jpg" alt="Изображеие города">
           <ul class="conditions__list">
             <li class="conditions__item conditions__item--housing">
               <h4 class="conditions__caption">Жилье</h4>
@@ -53,20 +54,20 @@
             </li>
           </ul>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--extended">
           <h3 class="advantage__title">Там есть мост дьявола</h3>
           <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          <img src="#" alt="Изображение ландшафта">
+          <img src="img/photo-bridge-mobile.jpg" alt="Изображение моста">
         </li>
-        <li class="advantages__item advantage__item--line">
+        <li class="advantages__item advantage__item--line advantages__item--brief">
           <h3 class="advantages__title">Небольшая площадь</h3>
           <p class="advantages__text">Все интересные места находятся очень близко</p>
         </li>
-        <li class="advantages__item advantage__item--line">
+        <li class="advantages__item advantage__item--line advantages__item--brief">
           <h3 class="advantages__title">Красивая дорога</h3>
           <p class="advantages__text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--brief">
           <h3 class="advantages__title">Мало туристов</h3>
           <p class="advantages__text">Большинство едет в гранд каньони толпится там</p>
         </li>
@@ -80,12 +81,12 @@
     </section>
     <section class="map">
       <h2 class="visually-hidden">Седона на карте</h2>
-      <img src="#" alt="схематичное изображение положения Седоны на карте">
+      <img src="img/map-mobile.jpg" alt="схематичное изображение положения Седоны на карте">
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__contacts contacts">
-      <a href="@">#visitsedona</a>
+    <div class="page-footer__contact">
+      <a class="page-footer__link" href="@">#visitsedona</a>
     </div>
     <div class="page-footer__social social">
       <ul class="social__list">
