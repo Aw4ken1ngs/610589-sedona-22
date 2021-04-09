@@ -5,21 +5,37 @@
 }
 
 .main-navigation__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
   list-style: none;
-}
 
-.main-navigation__item {
-  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .main-navigation__item:nth-of-type(3) {
+      order: 4;
+    }
+
+    .main-navigation__item:nth-of-type(4) {
+      order: 5;
+    }
+
+    .main-navigation__item:nth-of-type(5) {
+      order: 1;
+    }
+  }
 }
 
 .main-navigation__link {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   background-color: @background-color;
   color: @light-text-color;
-  padding: 0 auto;
-  min-width: 320px;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }

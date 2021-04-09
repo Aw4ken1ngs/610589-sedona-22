@@ -1,3 +1,7 @@
+.conditions {
+  display: contents;
+}
+
 .conditions__caption {
   font-weight: bold;
   color: @dark-title-color;
@@ -5,4 +9,10 @@
 
 .conditions__list {
   background-color: @basic-background-color;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
+

@@ -1,15 +1,30 @@
 .offer {
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
+}
+
+.offer__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 435px;
+  }
 }
 
 .offer__title {
+  font-size: 21px;
+  line-height: 26px;
   color: @dark-title-color;
 }
 
 .offer__button {
-  background-color: @background-color;
   text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: @background-color;
+  color: @light-text-color;
 }

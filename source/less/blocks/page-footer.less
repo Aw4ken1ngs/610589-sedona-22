@@ -2,6 +2,18 @@
   text-transform: uppercase;
 }
 
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
 .page-footer__link {
   font-weight: bold;
   font-size: 21px;

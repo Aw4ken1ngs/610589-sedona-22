@@ -6,15 +6,69 @@
   color: @dark-text-color;
 }
 
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
 .advantages__title {
   font-weight: bold;
   color: @dark-title-color;
 }
 
-.advantages__item--extended {
-  background-color: @background-color;
+.advantages__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.advantages__item--brief {
+.advantages__item--city {
+  background-color: @background-color;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.advantages__item--bridge {
+  background-color: @background-color;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.advantages__item--area {
   background-color: @background-special-color;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 33.3%;
+  }
+}
+
+.advantages__item--road {
+  background-color: @background-special-color;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 33.3%;
+  }
+}
+
+.advantages__item--tourist {
+  background-color: @background-special-color;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 33.3%;
+  }
+}
+
+.advantages__image {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
