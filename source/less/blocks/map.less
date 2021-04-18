@@ -1,4 +1,14 @@
-/* тут будет деекоративный элемент на карте*/
 .map__image {
-  width: 100%;
+  max-width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    background-image: url("../../img/map-marker.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
