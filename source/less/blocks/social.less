@@ -1,3 +1,52 @@
 .social__link {
   text-decoration: none;
 }
+
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 6px;
+  grid-row-gap: 0;
+  margin: 36px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item {
+  background-color: @background-color;
+  width: 48px;
+  height: 48px;
+}
+
+.social__link--twitter {
+  position: relative;
+
+  &__twitter {
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    top: 16px;
+    left: 17px;
+  }
+}
+
+.social__link--facebook {
+  position: relative;
+
+  &__facebook {
+    position: absolute;
+    width: 9px;
+    height: 19px;
+  }
+}
+
+.social__link--youtube {
+  position: relative;
+
+  &__youtube {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+  }
+}
