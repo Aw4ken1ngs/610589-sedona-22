@@ -23,17 +23,11 @@
 .advantages__title {
   font-weight: bold;
   color: @dark-title-color;
-
-  &--change {
-    color: @light-text-color;
-  }
 }
 
-.advantages__number--change {
-  color: @light-text-color;
-}
-
-.advantages__text--change {
+.advantages__item-big .advantages__title,
+.advantages__item-big .advantages__number,
+.advantages__item-big .advantages__text {
   color: @light-text-color;
 }
 
@@ -49,47 +43,13 @@
   }
 }
 
-.advantages__item {
-  &--city {
-    background-color: @background-color;
+.advantages__item-big {
+  background-color: @background-color;
 
-    @media (min-width: @tablet-width) {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-
-  &--bridge {
-    background-color: @background-color;
-
-    @media (min-width: @tablet-width) {
-      display: flex;
-      width: 100%;
-    }
-  }
-
-  &--area {
-    background-color: @background-special-color;
-
-    @media (min-width: @tablet-width) {
-      flex-basis: 33.3%;
-    }
-  }
-
-  &--road {
-    background-color: @background-special-color;
-
-    @media (min-width: @tablet-width) {
-      flex-basis: 33.3%;
-    }
-  }
-
-  &--tourist {
-    background-color: @background-special-color;
-
-    @media (min-width: @tablet-width) {
-      flex-basis: 33.3%;
-    }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -98,26 +58,37 @@
   padding: 0;
   margin: 0;
 
+  &--bridge {
+    @media (min-width: @tablet-width) {
+      flex-basis: 66.6%;
+      order: -1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     flex-basis: 66.6%;
     background-image: url("../../img/photo-city-tablet.jpg");
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     flex-basis: 66.6%;
     background-image: url("../../img/photo-city-desktop.jpg");
   }
 }
 
-.advantages__image--bridge {
-  @media (min-width: @tablet-width) {
-    flex-basis: 66.6%;
-    order: -1;
-  }
-}
-
 .advantages__wrapper {
   max-width: 268px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  vertical-align: middle;
   margin: 0 auto;
   text-align: center;
+}
+
+.advantages__item-small {
+  background-color: @background-special-color;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 33.3%;
+  }
 }

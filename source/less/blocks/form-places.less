@@ -1,9 +1,73 @@
 .form-places {
   margin-top: 20px;
   flex-basis: 100%;
+  border: none;
 }
 
 .form-places__label {
   font-weight: bold;
   color: @dark-title-color;
+}
+
+.form-places__list {
+  padding: 0;
+  padding-top: 30px;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form-places__item {
+  position: relative;
+  padding-left: 79px;
+  padding-bottom: 54px;
+}
+
+.form-places__input + .form-places__label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 46px;
+  height: 46px;
+  border-radius: 5px;
+  background-color: @background-input-color;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.form-places__input:checked + .form-places__label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 46px;
+  height: 46px;
+  border-radius: 5px;
+  background-color: @background-input-color;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.form-places__input:checked + .form-places__label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 22px;
+  width: 23px;
+  height: 17px;
+  border-radius: 5px;
+  background: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }

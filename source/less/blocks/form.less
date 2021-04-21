@@ -1,6 +1,22 @@
 .form {
+  margin: 0;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+.form__legend {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 50%;
+    text-align: right;
+  }
+}
+
+.form__text {
+  text-transform: uppercase;
 }
