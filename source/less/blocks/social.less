@@ -1,7 +1,3 @@
-.social__link {
-  text-decoration: none;
-}
-
 .social__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,32 +15,23 @@
   height: 48px;
 }
 
-.social__link--twitter {
+.social__link {
   position: relative;
+  text-decoration: none;
 
-  &__twitter {
+  &--twitter {
     position: absolute;
-    width: 18px;
-    height: 15px;
     top: 16px;
     left: 17px;
   }
-}
 
-.social__link--facebook {
-  position: relative;
-
-  &__facebook {
+  &--facebook {
     position: absolute;
     width: 9px;
     height: 19px;
   }
-}
 
-.social__link--youtube {
-  position: relative;
-
-  &__youtube {
+  &--youtube {
     position: absolute;
     width: 20px;
     height: 14px;

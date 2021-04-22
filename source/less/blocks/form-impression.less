@@ -3,9 +3,50 @@
   flex-basis: 50%;
   box-sizing: border-box;
   margin: 0;
+  border: none;
 }
 
 .form-impression__label {
   font-weight: bold;
   color: @dark-title-color;
+}
+
+.form-impression__list {
+  list-style: none;
+  padding: 0;
+}
+
+.form-impression__item {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+  padding-left: 80px;
+}
+
+.form-impression__input + .form-impression__label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: @background-input-color;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.form-impression__input:checked + .form-impression__label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: @dark-text-color;
+  box-shadow: inset 0 0 0 17px @background-input-color;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
