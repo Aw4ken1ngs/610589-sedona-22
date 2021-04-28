@@ -9,6 +9,7 @@
 }
 
 .photo__item {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -33,6 +34,12 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 85px;
+    grid-template-rows: repeat(2, 1fr);
     background-color: @background-text-color;
   }
 
@@ -48,66 +55,60 @@
 .photo__author {
   color: @dark-text-color;
 
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
   @media (min-width: @desktop-width) {
     color: @light-text-color;
   }
 }
 
 .photo__description {
+  position: relative;
   font-weight: bold;
   color: @dark-title-color;
+  padding-left: 35px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: right;
+    vertical-align: middle;
+  }
 
   @media (min-width: @desktop-width) {
     color: @light-text-color;
   }
+}
+
+.photo__description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  height: 23px;
+  width: 23px;
+  background-image: url("../../img/like-icon.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .photo__title {
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
   @media (min-width: @desktop-width) {
     color: @light-text-color;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .photo__item--vastness {
-    position: relative;
-  }
-
-  .photo__item--vegetation {
-    position: relative;
-  }
-
-  .photo__item--road {
-    position: relative;
-  }
-
-  .photo__item--bridge {
-    position: relative;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .photo__block-text--vastness {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .photo__block-text--vegetation {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .photo__block-text--road {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .photo__block-text--bridge {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
   }
 }
