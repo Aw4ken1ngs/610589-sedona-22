@@ -13,6 +13,12 @@
   list-style: none;
   background-color: @background-color;
 
+  .main-navigation__item {
+    @media (min-width: @tablet-width) {
+      min-width: 150px;
+    }
+  }
+
   .main-navigation__item:nth-of-type(5) {
     background-color: @basic-background-color;
   }
@@ -50,6 +56,18 @@
   @media (min-width: @tablet-width) {
     color: @dark-title-color;
     box-shadow: none;
+  }
+}
+
+.page-header__logo-image {
+  width: 102px;
+  height: auto;
+  position: relative;
+  top: -10px;
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: auto;
   }
 }
 
