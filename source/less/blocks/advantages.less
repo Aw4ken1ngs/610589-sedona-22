@@ -32,7 +32,6 @@
 }
 
 .advantages__container {
-  max-width: 300px;
   margin: 0 auto;
   padding-top: 55px;
   padding-bottom: 40px;
@@ -50,6 +49,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    &--changed {
+      display: flex;
+      flex-direction: row-reverse;
+    }
   }
 }
 
@@ -57,11 +61,12 @@
   width: 100%;
   padding: 0;
   margin: 0;
+  display: flex;
 
   &--bridge {
     @media (min-width: @tablet-width) {
       flex-basis: 66.6%;
-      order: -1;
+      flex-direction: row-reverse;
     }
   }
 

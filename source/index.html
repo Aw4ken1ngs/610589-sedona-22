@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/152.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -19,8 +25,14 @@
           <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">Форма отзыва</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="#">Html Academy</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--logo"
-              href="index.html"><img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102"
-                height="84" alt="Логотип Седона"></a></li>
+              href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="84"
+                  alt="Логотип Седона">
+              </picture>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -46,7 +58,13 @@
               <p class="advantages__text">Седона не аттракцион для туристов, там течет своя
                 жизнь</p>
             </div>
-            <img class="advantages__image" src="img/photo-city-mobile.jpg" alt="Изображеие города">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/photo-city-mobile.jpg" srcset="img/photo-city-mobile@2x.jpg 2x"
+                alt="Изображеие города">
+            </picture>
             <ul class="conditions">
               <li class="conditions__item conditions__item--house">
                 <h4 class="conditions__caption title">Жилье</h4>
@@ -62,15 +80,21 @@
               </li>
             </ul>
           </li>
-          <li class="advantages__item advantages__item-big">
+          <li class="advantages__item advantages__item-big advantages__item-big--changed">
             <div class="advantages__container">
               <h3 class="advantages__title">Там есть мост дьявола</h3>
               <p class="advantages__number">— №2 —</p>
               <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно
               </p>
             </div>
-            <img class="advantages__image advantages__image--bridge" src="img/photo-bridge-mobile.jpg"
-              alt="Изображение моста">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="advantages__image advantages__image--bridge" src="img/photo-bridge-mobile.jpg"
+                srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Изображение моста">
+            </picture>
           </li>
           <li class="advantages__item advantages__item-small">
             <div class="advantages__wrapper">
@@ -105,7 +129,11 @@
     </div>
     <section class="map">
       <h2 class="visually-hidden">Седона на карте</h2>
-      <img class="map__image" src="img/map-mobile.jpg" alt="схематичное изображение положения Седоны на карте">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+        <img class="map__image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="схематичное изображение положения Седоны на карте">
+      </picture>
     </section>
   </main>
   <div class="container">
@@ -168,4 +196,5 @@
   </div>
   <script src="js/app.js"></script>
 </body>
+
 </html>
