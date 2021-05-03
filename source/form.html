@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="img/favicons/favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/152.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -14,13 +19,20 @@
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item"><a class="main-navigation__link" href="index.html">Главная</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link">Главная</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Фото и видео</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">Форма отзыва</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="#">Html Academy</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--logo"
-              href="index.html"><img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102"
-                height="84" alt="Логотип Седона"></a></li>
+              href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="84"
+                  alt="Логотип Седона">
+              </picture>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
