@@ -1,6 +1,14 @@
 .video-content {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 800px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .video-content__title {
@@ -15,7 +23,8 @@
 
 .video-content__film {
   height: auto;
-  background: url("../../img/video-mobile.jpg") @background-input-color no-repeat center top;
+  width: 100%;
+  background: @background-input-color no-repeat center top;
 }
 
 .video-content__controls {
@@ -32,6 +41,10 @@
     margin: 0;
     margin-top: -95px;
     background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
   }
 }
 

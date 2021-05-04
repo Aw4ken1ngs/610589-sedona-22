@@ -4,9 +4,29 @@
   height: 160px;
   margin: 0 auto;
   padding: 0;
-  background: url("../../img/back-catalog-moble.jpg");
+  background: url("../../img/bg-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/bg-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+    background: url("../../img/bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bg-desktop@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+  }
 }
 
 .screen-welcome__image {
@@ -14,4 +34,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 229px;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+  }
 }
