@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/152.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -14,13 +19,20 @@
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item"><a class="main-navigation__link" href="index.html">Главная</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link">Главная</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Фото и видео</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">Форма отзыва</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="#">Html Academy</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--logo"
-              href="index.html"><img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102"
-                height="84" alt="Логотип Седона"></a></li>
+              href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="84"
+                  alt="Логотип Седона">
+              </picture>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -37,8 +49,14 @@
           экономике.</p>
         <ul class="photos__list photo">
           <li class="photo__item photo__item--vastness">
-            <img class="photo__image" src="../img/photo-vastness.jpg" width="280" height="280"
-              alt="Изображение простовров Седоны">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-vastness-desktop.jpg 1x, img/photo-vastness-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-vastness-tablet.jpg 1x, img/photo-vastness-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-vastness-mobile.jpg" srcset="img/photo-vastness-mobile@2x.jpg 2x"
+                alt="Изображение простовров Седоны">
+            </picture>
             <div class="photo__block-text photo__block-text--vastness">
               <h3 class="photo__title title">Неродные просторы</h3>
               <a class="photo__author">Автор фото: Борис</a>
@@ -46,8 +64,14 @@
             </div>
           </li>
           <li class="photo__item photo__item--vegetation">
-            <img class="photo__image" src="../img/photo-vegetation.jpg" width="280" height="280"
-              alt="Изображение необычных растений">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-vegetation-desktop.jpg 1x, img/photo-vegetation-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-vegetation-tablet.jpg 1x, img/photo-vegetation-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-vegetation-mobile.jpg"
+                srcset="img/photo-vegetation-mobile@2x.jpg 2x" alt="Изображение необычных растений">
+            </picture>
             <div class="photo__block-text photo__block-text--vegetation">
               <h3 class="photo__title title">Местная растительность</h3>
               <a class="photo__author">Автор фото: Сергей</a>
@@ -55,8 +79,13 @@
             </div>
           </li>
           <li class="photo__item photo__item--road">
-            <img class="photo__image" src="../img/photo-road.jpg" width="280" height="280"
-              alt="Изображение дороги в горах">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-road-desktop.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-road-tablet.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-road-mobile.jpg" srcset="img/photo-road-mobile@2x.jpg 2x"
+                alt="Изображение дороги в горах">
+            </picture>
             <div class="photo__block-text photo__block-text--road">
               <h3 class="photo__title title">Дорога на север</h3>
               <a class="photo__author">Автор фото: Петр</a>
@@ -64,7 +93,14 @@
             </div>
           </li>
           <li class="photo__item photo__item--bridge">
-            <img class="photo__image" src="../img/photo-bridge.jpg" width="280" height="280" alt="Изображение моста">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-bridge-desktop1.jpg 1x, img/photo-bridge-desktop1@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bridge-tablet1.jpg 1x, img/photo-bridge-tablet1@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-bridge-mobile1.jpg" srcset="img/photo-bridge-mobile1@2x.jpg 2x"
+                alt="Изображение моста">
+            </picture>
             <div class="photo__block-text photo__block-text--bridge">
               <h3 class="photo__title title">Мост дьявола</h3>
               <a class="photo__author">Автор фото: Антон</a>
@@ -77,9 +113,14 @@
         <h2 class="video-content__title title">Все еще сомневаетесь?</h2>
         <p class="video-content__text">Смотрите видеопрезентацию и скорее за билетами, пока они не
           подорожали в очередной раз!</p>
-        <video class="video-content__film">
-          <source src="#">
-        </video>
+        <picture>
+          <source media="(min-width: 1200px)"
+            srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img class="video-content__film" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x"
+            alt="видео ролик седоны">
+        </picture>
         <div class="video-content__controls">
           <button class="video-content__button">
             <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
