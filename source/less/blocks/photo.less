@@ -91,16 +91,26 @@
   }
 }
 
-.photo__description::before {
-  content: "";
+.photo__icon-like {
   position: absolute;
-  top: 0;
-  left: 1px;
-  height: 23px;
   width: 23px;
-  background-image: url("../../img/like-icon.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  height: 21px;
+  top: auto;
+  bottom: 5px;
+  left: 1px;
+  right: auto;
+  color: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: @tablet-width) {
+    top: 12px;
+    bottom: auto;
+    left: auto;
+    right: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: @light-text-color;
+  }
 }
 
 .photo__title {
