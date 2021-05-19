@@ -13,6 +13,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const inject = require('gulp-inject');
 
 // Styles
 
@@ -36,7 +37,16 @@ exports.styles = styles;
 // HTML
 
 const html = () => {
+  var svgs = gulp
+    .src("source/img/icons-sprite/*.svg")
+    .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents (filePath, file) {
+      return file.contents.toString();
+  }
+
   return gulp.src("source/*.html")
+    .pipe(inject(svgs, { transform: fileContents }))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
@@ -87,12 +97,19 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    var svgs = gulp
+        .src("source/img/icons-sprite/*.svg")
+        .pipe(svgstore({ inlineSvg: true }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
+    return gulp
+        .src('source/index.html')
+        .pipe(inject(svgs, { transform: fileContents }))
+        .pipe(rename("sprite.svg"))
+        .pipe(gulp.dest("build/img/icons-sprite"));
 }
 
 exports.sprite = sprite;
@@ -104,7 +121,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
-    "!source/img/icons/*.svg",
+    "!source/img/icons-sprite/*.svg",
   ], {
     base: "source"
   })
@@ -179,7 +196,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
-    sprite,
+    //sprite,
     createWebp
   ),
   gulp.series(
