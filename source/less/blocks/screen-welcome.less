@@ -4,6 +4,7 @@
   height: 160px;
   margin: 0 auto;
   padding: 0;
+  margin-top: 14px;
   background: url("../img/bg-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -26,11 +27,26 @@
 
   @media (min-width: @desktop-width) {
     min-height: 301px;
+    margin-bottom: 94px;
   }
+}
+
+.screen-welcome::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 1200px;
+  height: 57px;
+  left: 50%;
+  margin-left: -600px;
+  background: url("../img/intro-triangles.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .screen-welcome__image {
   position: absolute;
+  padding-bottom: 18px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

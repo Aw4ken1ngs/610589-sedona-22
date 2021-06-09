@@ -1,6 +1,5 @@
 .intro {
   position: relative;
-  min-width: 320px;
   min-height: 390px;
   margin: 0 auto;
   background: url("../img/bg-mobile.jpg");
@@ -25,6 +24,19 @@
   }
 }
 
+.intro::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 1200px;
+  height: 57px;
+  left: 50%;
+  margin-left: -600px;
+  background: url("../img/intro-triangles.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 .intro__image {
   position: absolute;
   top: 50%;
@@ -35,5 +47,6 @@
 
   @media (min-width: @tablet-width) {
     width: 461px;
+    margin-top: -7px;
   }
 }

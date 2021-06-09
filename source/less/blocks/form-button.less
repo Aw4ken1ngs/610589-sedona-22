@@ -7,14 +7,28 @@
   flex-basis: 100%;
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 14px;
   background-color: @background-color;
   color: @light-text-color;
   text-transform: uppercase;
 }
 
 .form-button {
+  padding-left: 20px;
+  padding-right: 16px;
+  margin-bottom: 45px;
+
   @media (min-width: @tablet-width) {
     width: 50%;
+    margin-left: 60px;
+    max-width: 320px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 120px;
+    margin-right: 159px;
+    max-width: 480px;
+    margin-bottom: 70px;
   }
 }

@@ -1,7 +1,46 @@
 .form-places {
+  position: relative;
   margin-top: 20px;
   flex-basis: 100%;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.form-places::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -58px;
+    left: 50px;
+    height: 1px;
+    width: 125px;
+    background-color: @decor-form-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    left: 120px;
+  }
+}
+
+.form-places::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -58px;
+    right: 50px;
+    height: 1px;
+    width: 125px;
+    background-color: @decor-form-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    right: 120px;
+  }
 }
 
 .form-places__label {
@@ -19,6 +58,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    padding-top: 22px;
+    padding-left: 136px;
+    padding-right: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,34 +71,60 @@
 
 .form-places__item {
   position: relative;
-  padding-left: 79px;
+  padding-left: 83px;
   padding-bottom: 54px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 15px;
+  }
 }
 
 .form-places__input + .form-places__label::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 10px;
-  width: 46px;
-  height: 46px;
+  top: -16px;
+  left: 2px;
+  width: 55px;
+  height: 55px;
   border-radius: 5px;
   background-color: @background-input-color;
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: pointer;
+}
+
+.form-places__input + .form-places__label:hover::before {
+  background-color: @decor-form-color;
+}
+
+.form-places__input + .form-places__label:active::before {
+  background-color: @decor-line-color;
 }
 
 .form-places__input:checked + .form-places__label::before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 10px;
-  width: 46px;
-  height: 46px;
+  top: -16px;
+  left: 2px;
+  width: 55px;
+  height: 55px;
   border-radius: 5px;
   background-color: @background-input-color;
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: pointer;
+}
+
+.form-places__input:checked + .form-places__label:hover::before {
+  background-color: @decor-form-color;
+}
+
+.form-places__input:checked + .form-places__label:active::before {
+  background-color: @decor-line-color;
 }
 
 .form-places__input:checked + .form-places__label::after {
@@ -70,4 +138,8 @@
   background: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.form-places__input:checked + .form-places__label:active::after {
+  opacity: 0.3;
 }

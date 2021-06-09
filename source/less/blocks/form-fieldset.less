@@ -5,6 +5,11 @@
 .form-fieldset__name {
   display: flex;
   padding: 0;
+  padding-left: 6px;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0%;
+  }
 }
 
 .form-label {
@@ -13,6 +18,20 @@
 
 .form-fieldset__phone {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: -12px;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    width: 50%;
+    margin-top: 37px;
+  }
 
   &::before {
     content: "";
@@ -25,11 +44,32 @@
     background-image: url("../img/icon-phone.svg");
     background-position: 50%;
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      right: 38px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 1px;
+    }
   }
 }
 
 .form-fieldset__email {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 157px 1fr;
+    width: 50%;
+    margin-top: 37px;
+    padding-left: 0;
+  }
 
   &::before {
     content: "";
@@ -42,5 +82,13 @@
     background-image: url("../img/icon-mail.svg");
     background-position: 50%;
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      right: 38px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 0;
+    }
   }
 }

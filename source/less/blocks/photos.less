@@ -6,9 +6,28 @@
 .photos__text {
   text-transform: uppercase;
   text-align: center;
+  padding-top: 13px;
+  margin-bottom: 61px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    max-width: 438px;
+    margin: 0 auto;
+    margin-bottom: 81px;
+  }
 }
 
 .photos__title {
   font-size: 18px;
   line-height: 26px;
+  text-align: center;
+  padding-top: 8px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
 }

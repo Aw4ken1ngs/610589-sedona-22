@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -24,8 +24,8 @@
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item"><a class="main-navigation__link">Главная</a></li>
-          <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Фото и видео</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link" href="index.html">Главная</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--active" href="catalog.html">Фото и видео</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">Форма отзыва</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="#">Html Academy</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--logo"
@@ -47,109 +47,102 @@
         <h2 class="visually-hidden">Добро пожаловать в великодушную Седону</h2>
         <img class="screen-welcome__image" src="img/sedona.svg" width="229" height="39" alt="Седона">
       </section>
-      <section class="photos">
-        <h2 class="photos__title title">Фото и видео</h2>
-        <p class="photos__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике
-          и
-          экономике.</p>
-        <ul class="photos__list photo">
-          <li class="photo__item photo__item--vastness">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-vastness-desktop.webp 1x, img/photo-vastness-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-vastness-tablet.webp 1x, img/photo-vastness-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/photo-vastness-mobile.webp 1x, img/photo-vastness-mobile@2x.webp 2x">
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-vastness-desktop.jpg 1x, img/photo-vastness-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-vastness-tablet.jpg 1x, img/photo-vastness-tablet@2x.jpg 2x">
-              <img class="photo__image" src="img/photo-vastness-mobile.jpg" srcset="img/photo-vastness-mobile@2x.jpg 2x"
-                alt="Изображение простовров Седоны">
-            </picture>
-            <div class="photo__block-text photo__block-text--vastness">
-              <h3 class="photo__title title">Неродные просторы</h3>
-              <a class="photo__author">Автор фото: Борис</a>
-              <p class="photo__description">1350</p>
-              <svg class="photo__icon-like" width="23" height="21">
-                <use xlink:href="img/icons-sprite/sprite.svg#icon-like"></use>
-              </svg>
-            </div>
-          </li>
-          <li class="photo__item photo__item--vegetation">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-vegetation-desktop.webp 1x, img/photo-vegetation-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-vegetation-tablet.webp 1x, img/photo-vegetation-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/photo-vegetation-mobile.webp 1x, img/photo-vegetation-mobile@2x.webp 2x">
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-vegetation-desktop.jpg 1x, img/photo-vegetation-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-vegetation-tablet.jpg 1x, img/photo-vegetation-tablet@2x.jpg 2x">
-              <img class="photo__image" src="img/photo-vegetation-mobile.jpg"
-                srcset="img/photo-vegetation-mobile@2x.jpg 2x" alt="Изображение необычных растений">
-            </picture>
-            <div class="photo__block-text photo__block-text--vegetation">
-              <h3 class="photo__title title">Местная растительность</h3>
-              <a class="photo__author">Автор фото: Сергей</a>
-              <p class="photo__description">143</p>
-              <svg class="photo__icon-like" width="23" height="21">
-                <use xlink:href="img/icons-sprite/sprite.svg#icon-like"></use>
-              </svg>
-            </div>
-          </li>
-          <li class="photo__item photo__item--road">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-road-desktop.webp 1x, img/photo-road-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-road-tablet.webp 1x, img/photo-road-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-road-mobile.webp 1x, img/photo-road-mobile@2x.webp 2x">
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-road-desktop.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-road-tablet.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-              <img class="photo__image" src="img/photo-road-mobile.jpg" srcset="img/photo-road-mobile@2x.jpg 2x"
-                alt="Изображение дороги в горах">
-            </picture>
-            <div class="photo__block-text photo__block-text--road">
-              <h3 class="photo__title title">Дорога на север</h3>
-              <a class="photo__author">Автор фото: Петр</a>
-              <p class="photo__description">96</p>
-              <svg class="photo__icon-like" width="23" height="21">
-                <use xlink:href="img/icons-sprite/sprite.svg#icon-like"></use>
-              </svg>
-            </div>
-          </li>
-          <li class="photo__item photo__item--bridge">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/photo-bridge-desktop1.webp 1x, img/photo-bridge-desktop1@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-bridge-tablet1.webp 1x, img/photo-bridge-tablet1@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-bridge-mobile1.webp 1x, img/photo-bridge-mobile1@2x.webp 2x">
-              <source media="(min-width: 1200px)"
-                srcset="img/photo-bridge-desktop1.jpg 1x, img/photo-bridge-desktop1@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-bridge-tablet1.jpg 1x, img/photo-bridge-tablet1@2x.jpg 2x">
-              <img class="photo__image" src="img/photo-bridge-mobile1.jpg" srcset="img/photo-bridge-mobile1@2x.jpg 2x"
-                alt="Изображение моста">
-            </picture>
-            <div class="photo__block-text photo__block-text--bridge">
-              <h3 class="photo__title title">Мост дьявола</h3>
-              <a class="photo__author">Автор фото: Антон</a>
-              <p class="photo__description">254</p>
-              <svg class="photo__icon-like" width="23" height="21">
-                <use xlink:href="img/icons-sprite/sprite.svg#icon-like"></use>
-              </svg>
-            </div>
-          </li>
-        </ul>
-      </section>
+      <div class="container-catalog">
+        <section class="photos">
+          <h2 class="photos__title">Фото и видео</h2>
+          <p class="photos__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+            политике
+            и
+            экономике.</p>
+          <ul class="photos__list photo">
+            <li class="photo__item photo__item--vastness">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-vastness-desktop.webp 1x, img/photo-vastness-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-vastness-tablet.webp 1x, img/photo-vastness-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/photo-vastness-mobile.webp 1x, img/photo-vastness-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-vastness-desktop.jpg 1x, img/photo-vastness-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-vastness-tablet.jpg 1x, img/photo-vastness-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-vastness-mobile.jpg"
+                  srcset="img/photo-vastness-mobile@2x.jpg 2x" alt="Изображение простовров Седоны">
+              </picture>
+              <div class="photo__block-text photo__block-text--vastness">
+                <h3 class="photo__title">Неродные просторы</h3>
+                <a class="photo__author">Автор фото: Борис</a>
+                <p class="photo__description">1350</p>
+              </div>
+            </li>
+            <li class="photo__item photo__item--vegetation">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-vegetation-desktop.webp 1x, img/photo-vegetation-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-vegetation-tablet.webp 1x, img/photo-vegetation-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/photo-vegetation-mobile.webp 1x, img/photo-vegetation-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-vegetation-desktop.jpg 1x, img/photo-vegetation-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-vegetation-tablet.jpg 1x, img/photo-vegetation-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-vegetation-mobile.jpg"
+                  srcset="img/photo-vegetation-mobile@2x.jpg 2x" alt="Изображение необычных растений">
+              </picture>
+              <div class="photo__block-text photo__block-text--vegetation">
+                <h3 class="photo__title">Местная растительность</h3>
+                <a class="photo__author">Автор фото: Сергей</a>
+                <p class="photo__description">143</p>
+              </div>
+            </li>
+            <li class="photo__item photo__item--road">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-road-desktop.webp 1x, img/photo-road-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-road-tablet.webp 1x, img/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-road-mobile.webp 1x, img/photo-road-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-road-desktop.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-road-tablet.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-road-mobile.jpg" srcset="img/photo-road-mobile@2x.jpg 2x"
+                  alt="Изображение дороги в горах">
+              </picture>
+              <div class="photo__block-text photo__block-text--road">
+                <h3 class="photo__title">Дорога на север</h3>
+                <a class="photo__author">Автор фото: Петр</a>
+                <p class="photo__description">96</p>
+              </div>
+            </li>
+            <li class="photo__item photo__item--bridge">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-bridge-desktop1.webp 1x, img/photo-bridge-desktop1@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-bridge-tablet1.webp 1x, img/photo-bridge-tablet1@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/photo-bridge-mobile1.webp 1x, img/photo-bridge-mobile1@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-bridge-desktop1.jpg 1x, img/photo-bridge-desktop1@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-bridge-tablet1.jpg 1x, img/photo-bridge-tablet1@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-bridge-mobile1.jpg" srcset="img/photo-bridge-mobile1@2x.jpg 2x"
+                  alt="Изображение моста">
+              </picture>
+              <div class="photo__block-text photo__block-text--bridge">
+                <h3 class="photo__title">Мост дьявола</h3>
+                <a class="photo__author">Автор фото: Антон</a>
+                <p class="photo__description">254</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
       <section class="video-content">
-        <h2 class="video-content__title title">Все еще сомневаетесь?</h2>
+        <h2 class="video-content__title">Все еще сомневаетесь?</h2>
         <p class="video-content__text">Смотрите видеопрезентацию и скорее за билетами, пока они не
           подорожали в очередной раз!</p>
         <picture>

@@ -2,6 +2,12 @@
   max-width: 100%;
   position: relative;
 
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -10,5 +16,11 @@
     background-image: url("../img/map-marker.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+  }
+}
+
+.map {
+  @media (min-width: @desktop-width) {
+    margin-top: 12px;
   }
 }

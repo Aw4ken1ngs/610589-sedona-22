@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -22,9 +22,9 @@
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item"><a class="main-navigation__link">Главная</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link" href="index.html">Главная</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Фото и видео</a></li>
-          <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">Форма отзыва</a></li>
+          <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--active" href="form.html">Форма отзыва</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="#">Html Academy</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--logo"
               href="index.html">
@@ -46,13 +46,13 @@
         <img class="intro-section__image" src="img/text-intro-form.svg" alt="Приветственный текст">
       </section>
       <section class="review">
-        <h2 class="review__title title">Оставьте свой отзыв</h2>
-        <p class="review__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
+        <h2 class="review__title">Оставьте свой отзыв</h2>
+        <p class="review__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а  также о посещенных вами
           достопримечательностях</p>
         <h2 class="visually-hidden">Форма для заполнения</h2>
         <form class="form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="form-fieldset fieldset-rebuilt">
-            <legend class="form-title title">Представьтесь:</legend>
+            <legend class="form-title">Представьтесь:</legend>
             <p class="form-fieldset__name">
               <label class="form-label" for="name">Имя*:</label>
               <input class="form-input" type="text" id="name" name="name" placeholder="Петр">
@@ -67,7 +67,7 @@
             </p>
           </fieldset>
           <fieldset class="form-fieldset fieldset-number">
-            <legend class="form-title title">Контактная информация:</legend>
+            <legend class="form-title subject">Контактная информация:</legend>
             <p class="form-fieldset__phone">
               <label class="form-label" for="phone">Контактный телефон*:</label>
               <input class="form-input" type="tel" id="phone" name="tel" placeholder="Введите телефон">
@@ -78,7 +78,7 @@
             </p>
           </fieldset>
           <fieldset class="form-impression">
-            <legend class="form-title title">Ваше общее впечатление:</legend>
+            <legend class="form-title">Ваше общее впечатление:</legend>
             <ul class="form-impression__list">
               <li class="form-impression__item">
                 <input class="visually-hidden form-impression__input" type="radio" name="impression" value="positive"
@@ -98,7 +98,7 @@
             </ul>
           </fieldset>
           <fieldset class="form-places">
-            <legend class="form-title title">Посещенные достопримечательности:</legend>
+            <legend class="form-title subject">Посещенные достопримечательности:</legend>
             <ul class="form-places__list">
               <li class="form-places__item">
                 <input class="visually-hidden form-places__input" type="checkbox" name="place" value="bridge"
@@ -123,12 +123,12 @@
             </ul>
           </fieldset>
           <p class="form-letter">
-            <label class="form-title title" for="emotion-letter" tabindex="0">Опишите свои эмоции:</label>
+            <label class="title-letter" for="emotion-letter" tabindex="0">Опишите свои эмоции:</label>
             <textarea class="form-input form-input--big" id="emotion-letter" name="letter"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </p>
           <div class="form-button">
-            <button class="form-button__selected" type="submit">Оставить отзыв</button>
+            <button class="form-button__selected" type="submit">Отправить отзыв</button>
           </div>
           <div class="form__legend">
             <p class="form__text"><sup>*</sup> — обязательные поля</p>

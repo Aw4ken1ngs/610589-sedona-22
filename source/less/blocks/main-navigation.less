@@ -11,7 +11,10 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: @background-color;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: -15px;
+  }
 
   .main-navigation__item {
     @media (min-width: @tablet-width) {
@@ -34,6 +37,7 @@
 
     .main-navigation__item:nth-of-type(4) {
       order: 5;
+      background-color: @basic-background-color;
     }
 
     .main-navigation__item:nth-of-type(5) {
@@ -50,12 +54,56 @@
   padding-top: 10px;
   padding-bottom: 5px;
   color: @light-text-color;
+  background-color: @background-color;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
+  &:hover {
+    background-color: @hover-button;
+
+    @media (min-width: @tablet-width) {
+      background-color: @basic-background-color;
+    }
+  }
+
+  &:active {
+    background-color: @active-button;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
     color: @dark-title-color;
+    background-color: @basic-background-color;
     box-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: @background-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+      color: @dark-title-color;
+    }
+  }
+
+  &--active {
+    @media (min-width: @tablet-width) {
+      color: #766357;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        opacity: 0.3;
+        color: #766357;
+      }
+    }
   }
 }
 
@@ -73,13 +121,14 @@
 
 .main-navigation__toggle {
   position: absolute;
-  bottom: 50px;
-  right: 20px;
+  top: 16px;
+  right: 21px;
   z-index: 2;
   width: 23px;
   height: 23px;
   cursor: pointer;
   border: none;
+  background-color: @basic-background-color;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -89,13 +138,21 @@
 .main-navigation--closed .main-navigation__toggle::before {
   content: "";
   position: absolute;
-  top: 15px;
-  left: 17px;
+  top: 0;
+  left: 1px;
   width: 23px;
   height: 23px;
   background: url("../img/icon-menu.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+
+  &--closed:hover {
+    opacity: 0.6;
+  }
+
+  &--closed:active {
+    opacity: 0.3;
+  }
 }
 
 .main-navigation--opened .main-navigation__toggle {
@@ -111,6 +168,15 @@
   .main-navigation__link--logo {
     padding: 0;
     margin-bottom: -23px;
+    background-color: @basic-background-color;
+  }
+
+  &--opened:hover {
+    opacity: 0.6;
+  }
+
+  &--opened:active {
+    opacity: 0.3;
   }
 }
 
@@ -123,4 +189,8 @@
     position: static;
     min-height: 0;
   }
+}
+
+.main-navigation__link--logo {
+  background-color: @basic-background-color;
 }

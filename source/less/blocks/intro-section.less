@@ -3,6 +3,7 @@
   min-width: 320px;
   height: 159px;
   margin: 0 auto;
+  margin-top: -50px;
   background: url("../img/bg-mobile.jpg");
   background-repeat: no-repeat;
   background-position: 50% 75%;
@@ -25,15 +26,30 @@
 
   @media (min-width: @desktop-width) {
     min-height: 301px;
+    margin-bottom: 113px;
   }
 }
 
+.intro-section::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 1200px;
+  height: 57px;
+  left: 50%;
+  margin-left: -600px;
+  background: url("../img/intro-triangles.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+
 .intro-section__image {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 282px;
+  width: 232px;
   height: auto;
 
   @media (min-width: @tablet-width) {
@@ -42,5 +58,6 @@
 
   @media (min-width: @desktop-width) {
     width: 460px;
+    padding-top: 15px;
   }
 }

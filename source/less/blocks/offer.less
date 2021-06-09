@@ -1,32 +1,52 @@
 .offer {
   display: flex;
   flex-direction: column;
-  max-width: 260px;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    max-width: 435px;
+    max-width: 457px;
+    padding-top: 40px;
+    padding-bottom: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 30px;
   }
 }
 
 .offer__title {
   font-size: 21px;
   line-height: 26px;
+  margin-top: 27px;
   color: @dark-title-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .offer__text {
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
+  min-width: 290px;
+  margin-top: 4px;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 9px;
+  }
 }
 
 .offer__button {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
   text-decoration: none;
   text-align: center;
   padding-top: 15px;
@@ -34,4 +54,17 @@
   margin-bottom: 50px;
   background-color: @background-color;
   color: @light-text-color;
+
+  &:hover {
+    background-color: @hover-button;
+  }
+
+  &:active {
+    color: rgb(255, 255, 255, 0.3);
+    background-color: @active-button;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 }

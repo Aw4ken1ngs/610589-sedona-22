@@ -5,6 +5,11 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
@@ -16,10 +21,12 @@
 
   @media (min-width: @tablet-width) {
     flex-basis: 50%;
+    padding-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
     flex-basis: 33.3%;
+    padding-bottom: 0;
   }
 }
 
@@ -32,18 +39,22 @@
 .photo__block-text {
   margin: 0;
   padding: 0;
+  margin-bottom: 38px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     bottom: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 85px;
+    min-height: 80px;
+    grid-template-columns: 1fr 100px;
     grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 0;
     background-color: @background-text-color;
   }
 
   @media (min-width: @desktop-width) {
+    bottom: 2px;
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -54,6 +65,14 @@
   margin: 0;
   display: flex;
   background: @background-input-color no-repeat center top;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .photo__author {
@@ -64,6 +83,8 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    padding-left: 20px;
+    padding-top: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -77,6 +98,21 @@
   color: @dark-title-color;
   padding-left: 35px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    left: 0;
+    background: url("../img/like-icon.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      background: url("../img/like-icon-white.svg");
+    }
+  }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -84,6 +120,8 @@
     grid-row-end: 3;
     text-align: right;
     vertical-align: middle;
+    padding-top: 16px;
+    padding-right: 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -91,35 +129,22 @@
   }
 }
 
-.photo__icon-like {
-  position: absolute;
-  width: 23px;
-  height: 21px;
-  top: auto;
-  bottom: 5px;
-  left: 1px;
-  right: auto;
-  color: rgba(0, 0, 0, 0.3);
-
-  @media (min-width: @tablet-width) {
-    top: 12px;
-    bottom: auto;
-    left: auto;
-    right: 40px;
-  }
-
-  @media (min-width: @tablet-width) {
-    color: @light-text-color;
-  }
-}
-
 .photo__title {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-top: 11px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
   @media (min-width: @tablet-width) {
     text-align: left;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding-top: 5px;
+    padding-left: 20px;
   }
 
   @media (min-width: @desktop-width) {

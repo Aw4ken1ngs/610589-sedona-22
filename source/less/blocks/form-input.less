@@ -5,12 +5,15 @@
   margin: 0;
   font-weight: bold;
   color: @dark-title-color;
-  background-color: @background-input-color;
 }
 
 .form-input--big {
-  min-height: 160px;
+  min-height: 123px;
   background-color: @background-input-color;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+  }
 }
 
 .form-input {
@@ -18,4 +21,16 @@
   border: none;
   padding-top: 20px;
   padding-bottom: 18px;
+  background-color: @background-input-color;
+
+  &:hover {
+    background-color: @decor-form-color;
+  }
+
+  &:focus {
+    background-color: @basic-background-color;
+    border: 4px solid @decor-form-color;
+    border-radius: 0;
+    outline: none;
+  }
 }

@@ -4,15 +4,29 @@
   grid-template-rows: 1fr;
   grid-column-gap: 6px;
   grid-row-gap: 0;
-  margin: 36px auto;
+  margin: 34px auto;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
 }
 
 .social__item {
   background-color: @background-color;
   width: 48px;
   height: 48px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @hover-button;
+  }
+
+  &:active {
+    background-color: @active-button;
+  }
 }
 
 .social__link {
@@ -27,6 +41,10 @@
   left: 15px;
   top: 15px;
   fill: @decor-form-color;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social__icon-facebook {
@@ -36,6 +54,10 @@
   left: 17px;
   top: 13px;
   fill: @decor-form-color;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social__icon-youtube {
@@ -45,4 +67,8 @@
   left: 14px;
   top: 15px;
   fill: @decor-form-color;
+
+  &:active {
+    opacity: 0.3;
+  }
 }

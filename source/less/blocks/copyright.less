@@ -13,12 +13,26 @@
 
 .copyright__icon-htmlacademy {
   position: absolute;
-  width: 37px;
-  height: 27px;
-  top: -25px;
-  right: 7px;
+  width: 40px;
+  height: 40px;
+  top: -33px;
+  right: 3px;
+
+  &:hover {
+    fill: @background-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: @dark-title-color;
+  }
 }
 
 .copyright {
-  margin-bottom: 25px;
+  margin-top: 8px;
+  margin-left: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
